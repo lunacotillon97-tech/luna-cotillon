@@ -1,15 +1,214 @@
-<header style="min-height:100vh; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center;">
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Luna’s Cotillón</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Noto Sans KR', sans-serif;
+  background-color: #f4ede4;
+  background-image: radial-gradient(#e8dfd4 1px, transparent 1px);
+  background-size: 20px 20px;
+  color: #333;
+}
+
+/* HEADER GRANDE */
+header {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+h1 {
+  font-weight: 300;
+  letter-spacing: 10px;
+  font-size: 60px;
+}
+
+.sub {
+  margin-top: 20px;
+  letter-spacing: 4px;
+  font-size: 20px;
+  color: #666;
+}
+
+.section-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  padding: 80px 20px;
+}
+
+.card {
+  background: rgba(255,255,255,0.7);
+  backdrop-filter: blur(4px);
+  width: 320px;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+h2 {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 30px;
+  background-color: #d8b4f8;
+  color: white;
+  cursor: pointer;
+  letter-spacing: 2px;
+  transition: 0.3s;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.products img {
+  width: 100%;
+  border-radius: 15px;
+  margin-bottom: 10px;
+}
+
+.products p {
+  margin: 5px 0;
+}
+
+.products div {
+  border: 1px solid #f9a8d4;
+  padding: 12px;
+  border-radius: 15px;
+  margin-bottom: 15px;
+}
+
+/* Globos decorativos */
+.balloon {
+  position: absolute;
+  width: 60px;
+  height: 80px;
+  border-radius: 50%;
+  opacity: 0.6;
+  animation: float 6s ease-in-out infinite;
+}
+
+.balloon.pink { background: #f9a8d4; left: 10%; top: 20%; }
+.balloon.green { background: #bbf7d0; right: 15%; top: 25%; animation-duration: 7s; }
+.balloon.purple { background: #e9d5ff; left: 45%; top: 10%; animation-duration: 5s; }
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0); }
+}
+</style>
+</head>
+
+<body>
+
+<header>
 
 <div class="balloon pink"></div>
 <div class="balloon green"></div>
 <div class="balloon purple"></div>
 
-<h1 style="font-size:60px; letter-spacing:10px;">
-LUNA’S COTILLÓN
-</h1>
+<h1>LUNA’S COTILLÓN</h1>
+<div class="sub">Globos · Decoración · Personalizados</div>
 
-<div class="sub" style="font-size:20px; margin-top:20px;">
-Globos · Decoración · Personalizados
-</div>
+<br>
+<button onclick="document.querySelector('.section-container').scrollIntoView({behavior:'smooth'})">
+Ver más
+</button>
 
 </header>
+
+<section class="section-container">
+
+<!-- HACER PEDIDO -->
+<div class="card" style="text-align:center;">
+<h2>Hacer Pedido</h2>
+<p>Realizá tu consulta indicando temática, fecha del evento y productos deseados.</p>
+<br>
+<button onclick="window.open('https://wa.me/5491125725716')">
+Enviar Mensaje
+</button>
+</div>
+
+<!-- PRODUCTOS PERSONALIZADOS -->
+<div class="card products">
+<h2>Productos Personalizados</h2>
+
+<div>
+<img src="banderines.jpg">
+<strong>Banderines personalizados</strong>
+<p>Diseño según temática.</p>
+<p><strong>$2.500</strong></p>
+</div>
+
+<div>
+<img src="valijitas.jpg">
+<strong>Valijitas personalizadas</strong>
+<p>Con o sin vaso.</p>
+<p><strong>$4.000</strong></p>
+</div>
+
+<div>
+<img src="souvenirs.jpg">
+<strong>Bolsitas y tarjetas</strong>
+<p>Detalles personalizados.</p>
+<p><strong>$1.500</strong></p>
+</div>
+
+</div>
+
+<!-- GLOBOS -->
+<div class="card products">
+<h2>Globos</h2>
+
+<div>
+<img src="globos-latex.jpg">
+<strong>Globos de látex</strong>
+<p>Colores pasteles y clásicos.</p>
+<p><strong>$2.800 x50</strong></p>
+</div>
+
+<div>
+<img src="globos-metalizados.jpg">
+<strong>Globos metalizados</strong>
+<p>Números, letras y personajes.</p>
+<p><strong>$3.500</strong></p>
+</div>
+
+<div>
+<img src="arreglos.jpg">
+<strong>Arreglos con globos</strong>
+<p>Columnas y centros de mesa.</p>
+<p><strong>Consultar precio</strong></p>
+</div>
+
+</div>
+
+</section>
+
+</body>
+</html>
