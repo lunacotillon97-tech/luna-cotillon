@@ -1,0 +1,40 @@
+<div class="card products">
+<h2>Productos Personalizados</h2>
+
+<div>
+<strong>Banderines personalizados</strong>
+<p>Diseños según temática, nombre y edad.</p>
+</div>
+
+<div>
+<strong>Valijitas personalizadas</strong>
+<p>Con vaso o sin vaso, listas para souvenirs.</p>
+</div>
+
+<div>
+<strong>Bolsitas y tarjetas</strong>
+<p>Detalles personalizados para cada invitado.</p>
+</div>
+
+</div>
+
+
+<div class="card products">
+<h2>Globos</h2>
+
+<div>
+<strong>Globos de látex</strong>
+<p>Colores pasteles, clásicos y personalizados.</p>
+</div>
+
+<div>
+<strong>Arreglos con globos</strong>
+<p>Columnas, centros de mesa y combos para cumpleaños.</p>
+</div>
+
+<div>
+<strong>Globos metalizados</strong>
+<p>Números, letras y personajes.</p>
+</div>
+
+</div>
