@@ -5,17 +5,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Luna’s Cotillón</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
 
 <style>
 body{
 margin:0;
-font-family:'Noto Sans KR', sans-serif;
-background:#f4ede4;
+font-family:'Montserrat', sans-serif;
+background:#837bb9;
+color:#fdf4e5;
 overflow:hidden;
 }
 
-/* CONTENEDOR INICIO */
 .hero{
 height:100vh;
 display:flex;
@@ -24,74 +24,92 @@ justify-content:center;
 align-items:center;
 text-align:center;
 position:relative;
-overflow:hidden;
 }
 
 /* TÍTULO */
 h1{
-font-size:60px;
-letter-spacing:8px;
-font-weight:300;
+font-family:'Playfair Display', serif;
+font-size:70px;
+letter-spacing:4px;
+margin:0;
 animation:fadeIn 1.5s ease forwards;
 opacity:0;
 }
 
 .sub{
-color:#666;
-margin-top:20px;
-animation:fadeIn 2s ease forwards;
+margin-top:15px;
+letter-spacing:3px;
+font-size:14px;
 opacity:0;
+animation:fadeIn 2.5s ease forwards;
 }
 
 /* BOTONES */
 .button{
-padding:18px 45px;
-margin:15px;
-border-radius:30px;
-background:#d8b4f8;
-color:white;
+margin-top:30px;
+padding:16px 40px;
+border-radius:40px;
+background:#342e57;
+color:#fdf4e5;
 text-decoration:none;
-font-size:16px;
 transition:0.3s;
-display:inline-block;
+font-size:14px;
+letter-spacing:2px;
 }
 
 .button:hover{
-opacity:0.8;
+background:#fdf4e5;
+color:#342e57;
+}
+
+/* ESTRELLAS */
+.star{
+position:absolute;
+color:#fdf4e5;
+font-size:20px;
+animation:twinkle 3s infinite alternate;
+}
+
+.star1{ top:15%; left:20%; }
+.star2{ top:25%; right:15%; }
+.star3{ bottom:20%; left:30%; }
+.star4{ bottom:15%; right:25%; }
+
+/* LUNA */
+.moon{
+position:absolute;
+top:10%;
+right:10%;
+font-size:60px;
+opacity:0.3;
 }
 
 /* GLOBOS */
 .balloon{
 position:absolute;
-width:70px;
-height:90px;
+width:60px;
+height:80px;
 border-radius:50%;
-opacity:0.6;
+opacity:0.4;
 animation:float 6s ease-in-out infinite;
 }
 
-.balloon::after{
-content:"";
-position:absolute;
-width:2px;
-height:40px;
-background:#ccc;
-left:50%;
-top:90px;
-}
-
-.pink{ background:#f9a8d4; left:10%; bottom:-100px; animation-duration:8s;}
-.purple{ background:#e9d5ff; right:15%; bottom:-120px; animation-duration:6s;}
-.green{ background:#bbf7d0; left:70%; bottom:-140px; animation-duration:7s;}
+.pink{ background:#fdf4e5; left:10%; bottom:10%; }
+.purple{ background:#342e57; right:15%; bottom:15%; animation-duration:7s; }
 
 @keyframes float{
-0%{ transform:translateY(0);}
-50%{ transform:translateY(-40px);}
-100%{ transform:translateY(0);}
+0%{ transform:translateY(0); }
+50%{ transform:translateY(-30px); }
+100%{ transform:translateY(0); }
+}
+
+@keyframes twinkle{
+0%{ opacity:0.3; }
+100%{ opacity:1; }
 }
 
 @keyframes fadeIn{
-to{ opacity:1;}
+to{ opacity:1; }
 }
 </style>
 </head>
@@ -100,15 +118,18 @@ to{ opacity:1;}
 
 <div class="hero">
 
-<!-- Globos animados -->
+<div class="moon">🌙</div>
+
+<div class="star star1">✦</div>
+<div class="star star2">✦</div>
+<div class="star star3">✦</div>
+<div class="star star4">✦</div>
+
 <div class="balloon pink"></div>
 <div class="balloon purple"></div>
-<div class="balloon green"></div>
 
-<h1>LUNA’S COTILLÓN</h1>
+<h1>Luna’s Cotillón</h1>
 <div class="sub">Decoración · Personalizados · Globos</div>
-
-<br><br>
 
 <a href="personalizados.html" class="button">Ver Personalizados</a>
 <a href="globos.html" class="button">Ver Catálogo de Globos</a>
